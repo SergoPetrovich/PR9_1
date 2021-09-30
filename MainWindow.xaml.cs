@@ -36,12 +36,16 @@ namespace PR9
                 case "BIN":
                     Num = string.Format("BIN {0:X8}", Convert.ToString(Convert.ToInt32(inNum.Text.ToString()), 2));
                     break;
+                case "OCT":
+                    Num = string.Format("OCT {0:X8}", Convert.ToString(Convert.ToInt32(inNum.Text.ToString()), 8));
+                    //Num=String.format("0x{0:X8}", Num);
+                    break;
+                case "HEX
+                    Num = string.Format("OCT {0:X8}", Convert.ToString(Convert.ToInt32(inNum.Text.ToString()), 16));
+                    //Num=String.format("0x{0:X8}", Num);
+                    break;
 
             }
         }
     }
 }
-
-
-
-    
