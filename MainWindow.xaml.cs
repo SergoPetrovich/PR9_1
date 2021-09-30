@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace PR9
 {
-    
+
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
@@ -24,7 +24,24 @@ namespace PR9
         public MainWindow()
         {
             InitializeComponent();
+
         }
-     
+        public string Num;
+        void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton pressed = (RadioButton)sender;
+            // MessageBox.Show(pressed.Content.ToString());
+            switch (pressed.Content.ToString())
+            {
+                case "BIN":
+                    Num = string.Format("BIN {0:X8}", Convert.ToString(Convert.ToInt32(inNum.Text.ToString()), 2));
+                    break;
+
+            }
+        }
     }
 }
+
+
+
+    
